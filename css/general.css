@@ -1,214 +1,257 @@
 :root {
-    /* Principales */
-    --color-primary: #1F2937; /* Azul oscuro profesional */
-    --color-secondary: #3B82F6; /* Azul vibrante para llamadas a la acción */
-    --color-accent: #10B981; /* Verde esmeralda para detalles y confianza */
-  
-    /* Neutros */
-    --color-background: #F9FAFB; /* Fondo claro */
-    --color-surface: #FFFFFF; /* Tarjetas, cajas, etc. */
-    --color-border: #E5E7EB; /* Bordes sutiles */
-    --color-text: #111827; /* Texto principal */
-    --color-muted: #6B7280; /* Texto secundario o desactivado */
-  
-    /* Estados */
-    --color-success: #22C55E;
-    --color-warning: #F59E0B;
-    --color-error: #EF4444;
-  
-    /* Tipografía */
-    --font-primary: 'Inter', sans-serif;
-  }
+  /* Principales */
+  --color-primary: #1F2937;
+  /* Azul oscuro profesional */
+  --color-secondary: #3B82F6;
+  /* Azul vibrante para llamadas a la acción */
+  --color-accent: #10B981;
+  /* Verde esmeralda para detalles y confianza */
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  /* Neutros */
+  --color-background: #F9FAFB;
+  /* Fondo claro */
+  --color-surface: #FFFFFF;
+  /* Tarjetas, cajas, etc. */
+  --color-border: #E5E7EB;
+  /* Bordes sutiles */
+  --color-text: #111827;
+  /* Texto principal */
+  --color-muted: #6B7280;
+  /* Texto secundario o desactivado */
 
-  body {
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: var(--font-primary);
-  }
+  /* Estados */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
 
-  a {
-    text-decoration: none;
-  }
+  /* Tipografía */
+  --font-primary: 'Inter', sans-serif;
+}
 
-  .container {
-    /* la funcion min coge el ancho minimo posible de los
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  /* la funcion min coge el ancho minimo posible de los
       especificados */
-    width: min(100%, 1300px);
-    margin: 0 auto;
-  }
+  width: min(100%, 1300px);
+  margin: 0 auto;
+}
 
-  /******************* HEADER ******************/
+/******************* HEADER ******************/
 
-  #header {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    color: var(--color-text);
-  }
+#header {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  color: var(--color-text);
+  /* esto le pondra un identificador al contenedor
+    para poder usar los media containers */
+  container-name: header;
+  container-type: inline-size;
+  background-color: var(--color-surface);
+}
 
-  /******************* HEADER SUPERIOR ******************/
+/******************* HEADER SUPERIOR ******************/
 
-  .header__superior {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-bottom: .5rem;
-    padding: 1rem 1rem;
-  }
+.header__superior {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  padding: 1rem 2rem;
+}
 
-  .branding {
-    padding: 1rem;
-  }
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  font-size: 3rem;
+}
 
-    /******************* HEADER NAV ******************/
+.logo {
+  max-width: 200px;
+}
 
-  .container__menu {
-    background-color: var(--color-primary);
-    width: 100%;
-  }
-  
-  .menu > ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    justify-content: space-around;
-    height: 50px;
-  }
-  
-  .menu > ul > li {
-    position: relative;
-    height: 100%;
-  }
+/******************* HEADER NAV ******************/
 
-  .menu > ul > li > a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: white;
-    padding: .5rem;
-    text-transform: uppercase;
-    border-radius: .2rem;
-    /* transition define a que afectan 
+.container__menu {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
+.menu__pincipal__nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  justify-content: space-around;
+  height: 50px;
+}
+
+.menu>ul>li {
+  position: relative;
+  height: 100%;
+}
+
+.menu>ul>li>a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--color-surface);
+  padding: 0 .5rem;
+  text-transform: uppercase;
+  border-radius: .2rem;
+  /* transition define a que afectan 
      como seran las animaciones tiempo etc...*/
-     transition: all .3s ease; 
-  }
+  transition: all .3s ease;
+}
 
-  .menu > ul > li > a:hover {
-    /* esto hace que crezca un poco al pasar 
+.menu>ul>li>a:hover {
+  /* esto hace que crezca un poco al pasar 
     por encvima */
-    transform: scale(1.1);
-    background-color: var(--color-accent);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  }
+  transform: scale(1.1);
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
 
-
-  /* En lugar de usar el display none lo tengo sin visibilidad
+/* En lugar de usar el display none lo tengo sin visibilidad
   para que tenga una pequeña animación  */
-  .menu > ul > li > ul {
-    list-style: none;
-    background-color: white;
-    position: absolute;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    width: 200px;
-    visibility: hidden;
-    left: 3rem;
-    transition: all .3s ease; 
-    /* display: none; */
-    top: 5rem;
+.menu>ul>li>ul {
+  list-style: none;
+  background-color: var(--color-surface);
+  position: absolute;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  visibility: hidden;
+  left: 3rem;
+  transition: all .3s ease;
+  top: 5rem;
+  opacity: 0;
 
-  }
+}
 
-  .menu > ul > li:hover > ul {
-    visibility: visible;
-    top: 3rem;
-  }
+.menu>ul>li:hover>ul {
+  visibility: visible;
+  opacity: 1;
+  top: 3rem;
+  left: 3rem;
+}
 
-  /* Esto creara una caja asociada al ul justo antes de el
+/* Esto creara una caja asociada al ul justo antes de el,
   la dejo sin contenido y con los bordes transparentes 
   hago la forma de un triangulo,
   */
-  .menu > ul > li > ul::before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid white;
-    position: absolute;
-    top: -12px;
-    left: 1.2rem;
+.menu>ul>li>ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid var(--color-surface);
+  position: absolute;
+  top: -12px;
+  left: 1.2rem;
+}
 
-  }
+.menu>ul>li>ul>li>a {
+  display: block;
+  color: var(--color-text);
+  font-size: 1rem;
+  text-align: center;
+  padding: .7rem;
+  border-radius: .2rem;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
 
-  .menu > ul > li > ul > li > a {
-    display: block;
-    color: var(--color-text);
-    font-size: 1rem;
-    text-align: center;
-    padding: .5rem;
-    border-radius: .2rem;
-  }
+.menu>ul>li>ul>li>a:hover {
+  background-color: var(--color-accent);
+  transform: scale(1.1);
+  color: var(--color-surface);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
 
-  .menu > ul > li > ul > li > a:hover {
-    background-color: var(--color-accent);
-  }
+#icon {
+  font-size: 50px;
+  display: block;
+  text-align: end;
+  color: var(--color-surface);
+  padding: 1rem 2rem;
+  display: none;
+}
 
-  /* .head-d-nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
+#menu__check {
+  display: none;
+}
 
-  .head-d-nav-list-li {
-    padding: .2rem;
-    border-radius: .1rem;
-    position: relative;
-  }
 
-  .head-d-nav-list-li-link {
-    color: white;
-  }
-
-  .head-d-nav-list-li-link:hover {
-    text-decoration: underline;
-  }
-
-  #header-branding {
-    font-size: 2rem;
-    margin-bottom: .5rem;
-  }
-
-  .head-d-nav-list-dropdown {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .head-d-nav-list-dropdown {
-    background-color: var(--color-primary);
+/* esto es como una media query perso solo afecta al
+  contenedor nombrado como header */
+@container header (max-width: 800px) {
+  .branding__texto {
     display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 0;
   }
 
-  .head-d-nav-list-li:hover:hover > .head-d-nav-list-dropdown {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+  .menu__pincipal__nav {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    height: 0px;
+    transition: all .3s ease;
+    justify-content: flex-start;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu>ul>li {
+    height: 4rem;
+    width: 100%;
+  }
+
+  .menu>ul>li>a {
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+
+  .menu>ul>li>a:hover {
+    transform: scale(1);
+  }
+
+  .menu>ul>li:hover>ul {
+    top: 4rem;
+    z-index: 9;
+  } 
+
+  #icon {
     display: block;
-  } */
+  }
+
+  
+  .active {
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+}
