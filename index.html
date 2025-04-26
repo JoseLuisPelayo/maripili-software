@@ -6,9 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MariPili Software</title>
+    <title>Magic Art Hat</title>
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="assets/imgs/maki.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -19,17 +20,18 @@
 
         <div class="header__superior container">
             <div class="branding">
-                <span>Mari Pili</span>
-                <img src="" alt="header-branding-logo">
-                <span>Software</span>
+                <img class="logo" src="assets/imgs/maki.png" alt="header-branding-logo">
+                <img src="assets/imgs/magic2.png" alt="texto magic art hat" class="branding__texto">
             </div>
         </div>
         <div class="container__menu">
             <div class="container">
                 <nav class="menu">
-                    <ul>
-
-                        <li><a href="#" class="fa fa-home">Home</a></li>
+                    <div class="menu__icon">
+                        <i class="fa fa-bars icon" id="icon" for="menu__check"></i>
+                    </div>
+                    <ul class="menu__pincipal__nav">
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">Quienes somos</a></li>
                         <li>
                             <a href="#">Áreas de actuación</a>
@@ -57,7 +59,30 @@
 
     <main class="container">
 
-        cuerpo
+        <section class="principal_container">
+            <header id="principal__header">
+                <h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sint delectus nesciunt in autem aliquid
+                    modi cupiditate sapiente! Accusantium dicta eos ipsa perferendis saepe illum quidem?
+                </h1>
+            </header>
+            <article>
+                <img src="assets/imgs/pexels-fauxels-3183150.jpg" alt="equipo trabajando" class="principal_container__img">
+            </article>
+            <footer>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, minus perspiciatis quod hic nemo
+                    quaerat veritatis cumque eum mollitia, minima ad accusamus voluptatum voluptatibus aspernatur labore
+                    inventore omnis a quos.
+                </p>
+            </footer>
+        </section>
+        <aside>
+            <header>hUltimos</header>
+            <article>proy1</article>
+            <article>proy2</article>
+            <article>proy3</article>
+        </aside>
 
     </main>
 
@@ -65,9 +90,10 @@
 
         Footer
 
+
     </footer>
 
-
+    <script src="js/home.js"></script>
 </body>
 
 </html>
