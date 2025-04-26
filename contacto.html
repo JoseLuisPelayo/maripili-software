@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,17 +18,18 @@
 
         <div class="header__superior container">
             <div class="branding">
-                <span>Mari Pili</span>
-                <img src="" alt="header-branding-logo">
-                <span>Software</span>
+                <img class="logo" src="assets/imgs/maki.png" alt="header-branding-logo">
+                <img src="assets/imgs/magic2.png" alt="texto magic art hat" class="branding__texto">
             </div>
         </div>
         <div class="container__menu">
             <div class="container">
                 <nav class="menu">
-                    <ul>
-
-                        <li><a href="#" class="fa fa-home">Home</a></li>
+                    <div class="menu__icon">
+                        <i class="fa fa-bars icon" id="icon" for="menu__check"></i>
+                    </div>
+                    <ul class="menu__pincipal__nav">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#">Quienes somos</a></li>
                         <li>
                             <a href="#">Áreas de actuación</a>
@@ -53,7 +55,7 @@
 
     </header>
 
-    <main class="container">
+    <main class="container-contact">
 
         <div class="form-header">
             <h1>DevTech Solutions</h1>

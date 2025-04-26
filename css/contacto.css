@@ -1,0 +1,233 @@
+/******************* FORMULARIO ******************/
+.container-contact {
+    background: var(--color-surface);
+    border-radius: 12px;
+    border: 2px var(--color-secondary);
+    box-shadow: 0 8px 22px rgba(3, 55, 138, 0.544);
+    width: 100%;
+    max-width: 1200px;
+    /*Esto es para ajustar el responsive junto con width*/
+    margin: 2rem;
+    padding: 2.5rem;
+}
+
+/* Cabecera del formulario */
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-header h1 {
+    color: var(--color-primary);
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-header p {
+    color: var(--color-muted);
+    font-size: 2rem;
+}
+
+/* Secciones del formulario */
+.form-section-personal,
+.form-section-project,
+.form-section-technical,
+.form-section-budget {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    box-shadow: 0 0px 22px rgba(3, 55, 138, 0.31);
+    border-radius: 8px;
+}
+
+.section-title {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* Filas y grupos de formulario */
+.form-row {
+    display: flex;
+    /*flex container, permite que elementos hijos se alineen en horizontal*/
+    gap: 1.5rem;
+    /*Espacio fijo entre elementos hijos*/
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    flex: 1;
+    /*abreviatura de: flex-grow: 1, flex-shrink: 1, flex-basis: 0. Hace que cada .form-group ocupe el mismo espacio disponible dentro de .form-row*/
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Elementos de formulario */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /*Aplica una transición suave a todos los cambios de estilo (como hover o focus)*/
+}
+
+input:focus,
+/*Los focus son un pseudo-selector: se activan cuando un elemento recibe el "foco"*/
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.help-text {
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    margin-top: 0.25rem;
+}
+
+/* Checkboxes y radios */
+.checkbox-list,
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;/*Permite que los elementos hijos pasen a una nueva línea si no caben en el ancho disponible.*/
+    gap: 1rem;
+    flex-direction:column;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: row;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    accent-color: var(--color-accent);
+    margin-right: 0.1rem;
+}
+
+/* Botones */
+.buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.btn-secondary {
+    background: var(--color-border);
+    color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1300px) {
+    .container {
+        max-width: 1000px;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .checkbox-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .checkbox-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .checkbox-list {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section-personal,
+    .form-section-project,
+    .form-section-technical,
+    .form-section-budget {
+        padding: 1rem;
+    }
+
+    /* HE INTENTADO FOZAR la disposición vertical SOLO en "Requerimientos Técnicos" Y NO LO CONSIGO*/
+    
+}
