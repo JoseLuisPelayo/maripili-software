@@ -35,11 +35,9 @@
 }
 
 body {
-  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   font-family: var(--font-primary);
 }
 
@@ -67,6 +65,7 @@ a {
   container-name: header;
   container-type: inline-size;
   background-color: var(--color-surface);
+  z-index: 2;
 }
 
 /******************* HEADER SUPERIOR ******************/
