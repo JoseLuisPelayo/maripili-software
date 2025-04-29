@@ -65,6 +65,7 @@ a {
   container-name: header;
   container-type: inline-size;
   background-color: var(--color-surface);
+  z-index: 2;
 }
 
 /******************* HEADER SUPERIOR ******************/

@@ -1,0 +1,223 @@
+:root {
+  /* Principales */
+  --color-primary: #1F2937;
+  /* Azul oscuro profesional */
+  --color-secondary: #3B82F6;
+  /* Azul vibrante para llamadas a la acción */
+  --color-accent: #10B981;
+  /* Verde esmeralda para detalles y confianza */
+
+  /* Neutros */
+  --color-background: #F9FAFB;
+  /* Fondo claro */
+  --color-surface: #FFFFFF;
+  /* Tarjetas, cajas, etc. */
+  --color-border: #E5E7EB;
+  /* Bordes sutiles */
+  --color-text: #111827;
+  /* Texto principal */
+  --color-muted: #6B7280;
+  /* Texto secundario o desactivado */
+
+  /* Estados */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Tipografía */
+  --font-primary: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h-container {
+  /* la funcion min coge el ancho minimo posible de los
+        especificados */
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: var(--color-background);
+}
+
+/* *************** HOME ********************** */
+.principal__section {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+/* ************************* MAIN HOME ************************** */
+.principal_container {
+  background-color: var(--color-background);
+  padding: 1rem;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  width: min(100%, 1000px);
+}
+
+.principal_container>article {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.principal_container>footer,
+.principal__header {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.principal_container__img,
+.principal__header,
+.principal_container>footer {
+  width: min(100%, 1000px);
+  margin: auto;
+}
+
+/* ************************* ULTIMOS PROYECTOS ************************** */
+
+.main__proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: min(250px, 100%);
+  border: 1px solid var(--color-border);
+  height: fit-content;
+}
+
+.main__proyectos_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.card {
+  width: 100%;
+}
+
+.card img {
+  width: min(300px, 100%);
+  display: block;
+  margin: auto;
+  margin-bottom: .5rem;
+}
+
+.card>a {
+  color: var(--color-text);
+}
+
+/* ************************* CARRUSEL ************************** */
+
+.main__carrousel {
+  background-color: var(--color-primary);
+  padding-bottom: 48px;
+}
+
+.main__carrousel>h2 {
+  color: var(--color-surface);
+  text-align: center;
+  padding: 10px;
+}
+
+.main__carrousel__slider {
+  overflow: hidden;
+  background-color: var(--color-background);
+  /* esto hace que no salte de linea cuando haya un espacio en blaco */
+  white-space: nowrap;
+  position: relative;
+
+}
+
+/* Aqui vamos a crear una animacion que se llamara slider
+      que en el eje x vaya desde el punto 0 al menos 100% */
+@keyframes slider {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.main__carrousel__logos {
+
+  padding: 1.5rem 0;
+  animation: 25s slider infinite linear;
+  display: inline-block;
+}
+
+.main__carrousel__slider::before {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, var(--color-background), #F9FAFB00);
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main__carrousel__slider::after {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to left, var(--color-background), #F9FAFB00);
+  content: "";
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.main__carrousel__logos>img {
+  height: 10rem;
+  margin: 0 2rem;
+}
+
+
+@media (max-width: 800px) {
+  .principal__section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__proyectos {
+    width: 100%;
+  }
+
+  .main__proyectos_cards {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .fourth {
+    display: none;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .card img {
+    width: min(220px, 100%);
+
+  }
+
+  .main__carrousel__logos>img {
+    height: 8rem;
+  }
+}
