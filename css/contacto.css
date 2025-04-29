@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 1200px;
     /*Esto es para ajustar el responsive junto con width*/
-    margin: 2rem;
+    /* margin: 2rem; */
     padding: 2.5rem;
 }
 
@@ -33,17 +33,27 @@
 .form-section-project,
 .form-section-technical,
 .form-section-budget {
-    margin-bottom: 2.5rem;
-    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
     background: var(--color-surface);
     box-shadow: 0 0px 22px rgba(3, 55, 138, 0.31);
     border-radius: 8px;
+}
+.form-section-technical{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 0rem;
+
+
+
+
 }
 
 .section-title {
     color: var(--color-primary);
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--color-accent);
 }
@@ -181,7 +191,7 @@ input[type="radio"] {
 @media screen and (max-width: 768px) {
     .container {
         padding: 1.5rem;
-        margin: 1rem;
+        /* margin: 1rem; */
     }
 
     .form-header h1 {
