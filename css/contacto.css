@@ -1,4 +1,4 @@
-/******************* FORMULARIO ******************/
+/* ****************************** FORMULARIO ******************************** */
 .container-contact {
     background: var(--color-surface);
     border-radius: 12px;
@@ -134,8 +134,46 @@ input[type="radio"] {
     margin-right: 0.1rem;
 }
 
-/* Botones */
+/* ************************* BOTONES DEL FORMULARIO *********************** */
+
 .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn-primary:hover { /*Con "hover" aplicamos nuevo color de fondo al pasar el ratón por encima*/
+    background: #2563eb;
+}
+
+.btn-secondary {
+    background: var(--color-border);
+    color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/*AL REDUCIR EL CODIGO DE LA SECCION "BOTONES", LOS BOTONES
+SE ME MUEVEN A LA IZQUIERDA Y NO ENTIENDO POR QUE...*/
+/* buttons-container {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
@@ -151,9 +189,15 @@ input[type="radio"] {
     transition: all 0.3s ease;
 }
 
+.btn-primary,
+.btn-primary:hover,
+.btn-secondary,
+.btn-secondary:hover {
+    color: white; 
+}
+
 .btn-primary {
     background: var(--color-secondary);
-    color: white;
 }
 
 .btn-primary:hover {
@@ -168,6 +212,69 @@ input[type="radio"] {
 .btn-secondary:hover {
     background: #d1d5db;
 }
+
+ */ 
+/*en construcciooooooooooooooooooooooooooooooon*****************/
+/* ************************* INFO GENERAL ************************** */
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: min(250px, 100%);
+    border: 1px solid var(--color-border);
+    height: fit-content;
+  }
+  
+  .main__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .map {
+    width: 100%;
+  }
+  
+  .info img {
+    width: min(300px, 100%);
+    display: block;
+    margin: auto;
+    margin-bottom: .5rem;
+  }
+  
+  .info>a {
+    color: var(--color-text);
+  }
+  
+  /*eSTO LUEGO CUANDO LO TENGA ADAPTADO, LO METO ABAJO EN EL MEDIA*/
+  @media (max-width: 800px) {
+    .information {
+        width: 100%;
+      }
+    
+      .main__info {
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      .fourth {
+        display: none;
+      }
+    
+      .info {
+        width: 30%;
+      }
+    
+      .info img {
+        width: min(220px, 100%);
+    
+      }
+  }
 
 /* Responsive Design */
 @media screen and (max-width: 1300px) {
@@ -238,6 +345,6 @@ input[type="radio"] {
         padding: 1rem;
     }
 
-    /* HE INTENTADO FOZAR la disposición vertical SOLO en "Requerimientos Técnicos" Y NO LO CONSIGO*/
+   
     
 }
