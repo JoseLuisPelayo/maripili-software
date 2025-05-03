@@ -48,7 +48,7 @@ a {
 .container {
   /* la funcion min coge el ancho minimo posible de los
       especificados */
-  width: min(100%, 1300px);
+  width: min(100%, 1450px);
   margin: 0 auto;
 }
 
@@ -167,7 +167,7 @@ a {
   border-right: 12px solid transparent;
   border-bottom: 12px solid var(--color-surface);
   position: absolute;
-  top: -12px;
+  top: -11px;
   left: 1.2rem;
 }
 
