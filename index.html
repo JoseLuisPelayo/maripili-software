@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="assets/imgs/maki.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
                     </div>
                     <ul class="menu__pincipal__nav">
                         <li><a href="./index.html">Home</a></li>
-                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="./AboutUs.html">Quienes somos</a></li>
                         <li>
                             <a href="#">Áreas de actuación</a>
                             <ul>
@@ -149,11 +151,37 @@
 
     </main>
 
-    <footer class="container">
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Maripili-Software</h2>
+                <p>Ofrecemos soluciones tecnológicas innovadoras para ayudarte a crecer.</p>
+            </div>
 
-        Footer
+            <div class="footer-section links">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="AboutUs.html">Quienes somos</a></li>
+                    <li><a href="#">Áreas de actuación</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
 
-
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Maripili-Software. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="js/home.js"></script>
