@@ -1,0 +1,220 @@
+:root {
+    /* Principales */
+    --color-primary: #1F2937;  /* Azul oscuro profesional */
+    --color-secondary: #3B82F6; /* Azul vibrante para llamadas a la acción */
+    --color-accent: #10B981;    /* Verde esmeralda para detalles y confianza */
+  
+    /* Neutros */
+    --color-background: #F9FAFB;  /* Fondo claro */
+    --color-surface: #FFFFFF;     /* Tarjetas, cajas, etc. */
+    --color-border: #E5E7EB;      /* Bordes sutiles */
+    --color-text: #111827;        /* Texto principal */
+    --color-muted: #6B7280;       /* Texto secundario o desactivado */
+  
+    /* Estados */
+    --color-success: #22C55E;     /* Éxito */
+    --color-warning: #F59E0B;     /* Advertencia */
+    --color-error: #EF4444;       /* Error */
+  
+    /* Tipografía */
+    --font-primary: 'Inter', sans-serif;
+  }
+  
+  /* Reset de márgenes y padding */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+      font-family: var(--font-primary);
+      color: var(--color-text);
+      line-height: 1.6;
+      background-color: var(--color-background);
+  }
+  
+  /* Estilo de los títulos */
+  h1, h2 {
+      
+      color: var(--color-primary);
+      text-align: center;
+      text-transform: uppercase;
+      transition: transform 0.3s ease-in-out;
+    
+      transform: translateY(20px);
+      
+  }
+  
+  h1 {
+      font-size: 3rem;
+      margin-top: 30px;
+  }
+  
+  h2 {
+      font-size: 2rem;
+      margin-top: 20px;
+  }
+  
+  /* Estilo para los párrafos */
+  p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 20px auto;
+      max-width: 900px;
+      text-align: justify;
+      color: var(--color-muted);
+  }
+  
+  /* Animación de los títulos cuando se hace scroll */
+  
+  
+  /* Sección de introducción */
+  .descenso__intro {
+      text-align: center;
+      background-color: var(--color-surface);
+      padding: 40px 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      animation: fadeIn 1s ease-in-out;
+      
+  }
+  
+  .descenso__intro p {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      
+      
+  }
+  
+  /* Sección de gameplay con texto e imagen */
+  .descenso__gameplay {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      background-color: var(--color-surface);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      animation: fadeInDelay1 1.5s ease-in-out;
+      
+      
+  }
+  
+  .descenso__gameplay img {
+      max-width: 50%;
+      height: auto;
+      margin-right: 20px;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+  }
+  
+  .descenso__gameplay img:hover {
+      transform: scale(1.05);
+  }
+  
+  .descenso__gameplay .gameplay__text {
+      max-width: 50%;
+      text-align: left;
+  }
+  
+  .descenso__gameplay h2 {
+      color: var(--color-secondary);
+      margin-bottom: 15px;
+  }
+  
+  .descenso__gameplay p {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      text-align: justify;
+  }
+  
+  /* Sección de progreso */
+  .descenso__progreso {
+      background-color: var(--color-surface);
+      color: var(--color-text);
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      border-radius: 8px;
+      animation: fadeInDelay2 2s ease-in-out;
+      
+  }
+  
+  .descenso__progreso h2 {
+      color: var(--color-accent);
+      margin-bottom: 20px;
+  }
+  
+  .descenso__progreso p {
+      font-size: 1.1rem;
+      text-align: justify;
+  }
+  
+  /* Imágenes pixel art */
+  .descenso__img {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .descenso__img img {
+      max-width: 10%;
+      height: auto;
+      margin-bottom: 50px;
+      filter :drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+      animation: fadeInDelay2 3s ease-in-out;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  @keyframes fadeInDelay1 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInDelay2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+  
+  
+  
+  .h-container {
+    /* la funcion min coge el ancho minimo posible de los
+          especificados */
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 1300px);
+    margin: 0 auto;
+    flex-grow: 1;
+    background-color: var(--color-background);
+  }
+
+  
