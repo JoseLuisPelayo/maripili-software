@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- OJOO ESO DE ARRIBA DE LOS ICONOS SI NO LO USO DEBO QUITARLO!! -->
+    <title>Maripili Software</title>
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="header__superior container">
+            <div class="branding">
+                <img class="logo" src="assets/imgs/maki.png" alt="header-branding-logo">
+                <img src="assets/imgs/magic2.png" alt="texto magic art hat" class="branding__texto">
+            </div>
+        </div>
+        <div class="container__menu">
+            <div class="container">
+                <nav class="menu">
+                    <div class="menu__icon">
+                        <i class="fa fa-bars icon" id="icon" for="menu__check"></i>
+                    </div>
+                    <ul class="menu__pincipal__nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li>
+                            <a href="#">Áreas de actuación</a>
+                            <ul>
+                                <li><a href="#">area1</a></li>
+                                <li><a href="#">area2</a></li>
+                                <li><a href="#">area3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Proyectos</a>
+                            <ul>
+                                <li><a href="#">proyecto1</a></li>
+                                <li><a href="#">proyecto1</a></li>
+                                <li><a href="#">proyecto1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="global">
+
+        <main class="container-contact">
+
+            <div class="form-header">
+                <h1>DevTech Solutions</h1>
+                <p>Formulario de Solicitud de Servicios de Desarrollo</p>
+            </div>
+
+            <form id="devContactForm">
+                <!-- Sección datos personales -->
+                <div class="form-section-personal">
+                    <h2 class="section-title">Datos Personales</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Nombre<span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Tu nombre">
+                            <div class="help-text">Entre 2 y 50 caracteres</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Apellidos<span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Tus apellidos">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="612345678">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company" placeholder="Nombre de tu empresa">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="position">Cargo</label>
+                            <input type="text" id="position" name="position" placeholder="Tu cargo en la empresa">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Sección proyecto -->
+                <div class="form-section-project">
+                    <h2 class="section-title">Detalles del Proyecto</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectType">Tipo de Proyecto<span class="required">*</span></label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="" disabled selected>Selecciona un tipo de proyecto</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="app">Aplicación Móvil</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="cms">CMS Personalizado</option>
+                                <option value="api">API / Backend</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectBudget">Presupuesto Estimado (€)</label>
+                            <input type="number" id="projectBudget" name="projectBudget" min="1000"
+                                placeholder="Ej: 5000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectName">Nombre del Proyecto<span class="required">*</span></label>
+                        <input type="text" id="projectName" name="projectName" required
+                            placeholder="Nombre de tu proyecto">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDescription">Descripción del Proyecto<span class="required">*</span></label>
+                        <textarea id="projectDescription" name="projectDescription" required
+                            placeholder="Describe detalladamente tu proyecto, necesidades y objetivos aquí"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startDate">Fecha de Inicio Deseada</label>
+                            <input type="date" id="startDate" name="startDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deadline">Fecha Límite</label>
+                            <input type="date" id="deadline" name="deadline">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección técnica -->
+                <div class="form-section-technical">
+                    <h2 class="section-title">Requerimientos Técnicos</h2>
+
+                    
+                        <fieldset>
+                            <legend>Plataformas</legend>
+                            <div class="checkbox-list">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="platform1" name="platforms" value="web">
+                                    <label for="platform1">Web</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="platform2" name="platforms" value="android">
+                                    <label for="platform2">Android</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="platform3" name="platforms" value="ios">
+                                    <label for="platform3">iOS</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="platform4" name="platforms" value="desktop">
+                                    <label for="platform4">Escritorio</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    
+
+                    <fieldset>
+                        <legend>Tecnologías de Interés</legend>
+                        <div class="checkbox-list">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech1" name="technologies" value="html-css">
+                                <label for="tech1">HTML/CSS</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech2" name="technologies" value="javascript">
+                                <label for="tech2">JavaScript</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech3" name="technologies" value="react">
+                                <label for="tech3">React</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech4" name="technologies" value="angular">
+                                <label for="tech4">Angular</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech5" name="technologies" value="vue">
+                                <label for="tech5">Vue</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech6" name="technologies" value="node">
+                                <label for="tech6">Node.js</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech7" name="technologies" value="php">
+                                <label for="tech7">PHP</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="tech8" name="technologies" value="python">
+                                <label for="tech8">Python</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="additionalRequirements">Requerimientos Adicionales</label>
+                        <textarea id="additionalRequirements" name="additionalRequirements"
+                        placeholder="Cualquier otro requisito técnico específico puedes añadirlo aquí"></textarea>
+                    </div>
+                </div>
+                    
+
+                <!-- Sección presupuesto -->
+                <div class="form-section-budget">
+                    <h2 class="section-title">Presupuesto y Prioridades</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Prioridad del Proyecto</label>
+                            <div class="radio-group">
+                                <input type="radio" id="priority1" name="priority" value="low">
+                                <label for="priority1">Normal</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="priority2" name="priority" value="medium">
+                                <label for="priority2">Alta</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="priority3" name="priority" value="high">
+                                <label for="priority3">Urgente</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Modalidad de Trabajo</label>
+                            <div class="radio-group">
+                                <input type="radio" id="mode1" name="workMode" value="fixed">
+                                <label for="mode1">Precio Cerrado</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="mode2" name="workMode" value="hourly">
+                                <label for="mode2">Por Horas</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="mode3" name="workMode" value="mixed">
+                                <label for="mode3">Modalidad Mixta</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budgetComments">Comentarios sobre el Presupuesto</label>
+                        <textarea id="budgetComments" name="budgetComments"
+                            placeholder="Cualquier comentario adicional sobre el presupuesto o financiación puedes añadirlo aquí"></textarea>
+                    </div>
+                </div>
+
+                <!-- Botones del formulario -->
+                <div class="buttons-container">
+                    <button type="reset" class="btn btn-secondary">Limpiar Formulario</button>
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                </div>
+            </form>
+
+
+        </main>
+
+        <!-- /*Esto es para la info de contacto lateral*/ -->
+
+        <aside class="information">
+            <header>
+                <h2>Contacta con nosotros</h2>
+            </header>
+            <div class="main__info">
+                <article class="map">
+                    <a href="">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6072.
+                    433626075956!2d-3.7978210000000003!3d40.448338!3m2!1i1024!2i768!4f13.
+                    1!3m3!1m2!1s0xd4229053a97108d%3A0x1e7f6031754f0ce!2sGrupo%20Proeduca!5e0!3m2!1ses!2ses!4v1746202412056!5m2!1ses!2ses"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </a>
+                    <a href="https://maps.app.goo.gl/yhHEx7qee3rKm2vXA">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </a>
+                </article>
+                <article class="info">
+                    <a href="">
+                        <img src="assets/imgs/tel.png" alt="">
+                    </a>
+                    <a href="#">
+                        Lorem ipsum 999 999 999
+                    </a>
+                </article>
+                <article class="info">
+                    <a href="">
+                        <img src="assets/imgs/whatsapp-icon-free-png.webp" alt="">
+                    </a>
+                    <a href="#">
+                        Lorem ipsum 666 666 666
+                    </a>
+                </article>
+                <article class="info fourth">
+                    <a href="">
+                        <iframe width="220" height="200"
+                            src="https://www.youtube.com/embed/CSvFpBOe8eY?si=PrdsxvZYIu2guvWz"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQZyH9sRRjvtZhMw-ldRvXQ">
+                        ¿Lorem ipsum dolor sit?, ¡amet consectetur adipisicing elit!
+                    </a>
+                </article>
+            </div>
+        </aside>
+    </div>
+
+
+
+
+    <footer>
+
+
+    </footer>
+
+</body>
+
+</html>
