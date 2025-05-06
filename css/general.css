@@ -49,7 +49,7 @@ a {
 .container {
   /* la funcion min coge el ancho minimo posible de los
       especificados */
-  width: min(100%, 1300px);
+  width: min(100%, 1450px);
   margin: 0 auto;
 }
 
@@ -253,4 +253,79 @@ a {
     opacity: 1;
   }
   
+}
+
+/* Footer de la web corp */
+.footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h2,
+.footer-section h3,
+.footer-section p {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons a {
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.social-icons a:hover {
+  color: var(--color-secondary);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover{
+  transform: scale(1.1);
+}
+
+.footer-bottom > p {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #374151;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #9ca3af;
 }
