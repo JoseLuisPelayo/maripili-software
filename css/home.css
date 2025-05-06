@@ -44,7 +44,7 @@ a {
         especificados */
   display: flex;
   flex-direction: column;
-  width: min(100%, 1300px);
+  width: min(100%, 1500px);
   margin: 0 auto;
   flex-grow: 1;
   background-color: var(--color-background);
@@ -63,7 +63,7 @@ a {
   padding: 1rem;
   color: var(--color-text);
   font-family: var(--font-primary);
-  width: min(100%, 1000px);
+  width: 75%;
 }
 
 .principal_container>article {
@@ -81,7 +81,7 @@ a {
 .principal_container__img,
 .principal__header,
 .principal_container>footer {
-  width: min(100%, 1000px);
+  width: 100%;
   margin: auto;
 }
 
@@ -93,9 +93,10 @@ a {
   gap: 1rem;
   padding: 1rem;
   text-align: center;
-  width: min(250px, 100%);
+  width: 25%;
   border: 1px solid var(--color-border);
   height: fit-content;
+  margin-right: 1rem;
 }
 
 .main__proyectos_cards {
@@ -140,7 +141,6 @@ a {
   /* esto hace que no salte de linea cuando haya un espacio en blaco */
   white-space: nowrap;
   position: relative;
-
 }
 
 /* Aqui vamos a crear una animacion que se llamara slider
@@ -156,32 +156,29 @@ a {
 }
 
 .main__carrousel__logos {
-
   padding: 1.5rem 0;
   animation: 25s slider infinite linear;
   display: inline-block;
 }
 
+.main__carrousel__slider::after,
 .main__carrousel__slider::before {
   width: 20%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to right, var(--color-background), #F9FAFB00);
+  z-index: 1;
   content: "";
   top: 0;
+}
+
+.main__carrousel__slider::before {
+  background: linear-gradient(to right, var(--color-background), #F9FAFB00);
   left: 0;
-  z-index: 1;
 }
 
 .main__carrousel__slider::after {
-  width: 20%;
-  height: 100%;
-  position: absolute;
   background: linear-gradient(to left, var(--color-background), #F9FAFB00);
-  content: "";
-  top: 0;
   right: 0;
-  z-index: 1;
 }
 
 .main__carrousel__logos>img {
@@ -191,6 +188,10 @@ a {
 
 
 @media (max-width: 800px) {
+  .principal_container {
+    width: 100%;
+  }
+
   .principal__section {
     flex-direction: column;
     align-items: center;
@@ -198,6 +199,7 @@ a {
 
   .main__proyectos {
     width: 100%;
+    margin: 0;
   }
 
   .main__proyectos_cards {
@@ -215,7 +217,6 @@ a {
 
   .card img {
     width: min(220px, 100%);
-
   }
 
   .main__carrousel__logos>img {

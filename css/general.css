@@ -167,7 +167,7 @@ a {
   border-right: 12px solid transparent;
   border-bottom: 12px solid var(--color-surface);
   position: absolute;
-  top: -12px;
+  top: -11px;
   left: 1.2rem;
 }
 
