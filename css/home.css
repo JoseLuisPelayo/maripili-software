@@ -127,6 +127,7 @@ a {
 .main__carrousel {
   background-color: var(--color-secondary);
   padding-bottom: 48px;
+  margin-bottom: 3rem;
 }
 
 .main__carrousel>h2 {
