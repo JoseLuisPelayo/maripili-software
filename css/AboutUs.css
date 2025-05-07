@@ -65,13 +65,13 @@
   background: linear-gradient(to right bottom, #F59E0B, #EF4444);
 }
 
-h2 {
+.container .aus h2 {
   font-size: 2rem;
   color: black;
   padding: 1rem 0;
 }
 
-p {
+.container .aus p {
   font-size: 1.2rem;
   color: black;
   padding: 1rem 0;
