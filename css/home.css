@@ -187,7 +187,6 @@ a {
   margin: 0 2rem;
 }
 
-
 @media (max-width: 800px) {
   .principal_container {
     width: 100%;
@@ -208,7 +207,7 @@ a {
     gap: 1rem;
   }
 
-  .fourth {
+  .main__proyectos_cards .fourth {
     display: none;
   }
 
